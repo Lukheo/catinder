@@ -4,9 +4,7 @@ let like = document.getElementById("like");
 let favs = document.getElementById("favs");
 let soundGo = new Audio("duckDisappears.mp3");
 let soundCome = new Audio("DuckReappears.mp3");
-const API_KEY =
-  "live_YKc4v3hDWirgrD8COPJMjvaaj4T6I7xmzofutdO8Lvi96rkYIMFJhzE5pF7tztXE";
-
+import { API_KEY } from "./var.js";
 function getCat() {
   axios.get("https://api.thecatapi.com/v1/images/search").then((response) => {
     let catLink = response.data[0];
